@@ -1,1 +1,1 @@
-# qa_automatization_UI_tests
+# qa_automatization_UI_tests.
