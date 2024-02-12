@@ -7,3 +7,5 @@ class Data:
     email_exist = "Andrey_05_123@mail.ru"
     password_true = "xCCuHfmBJyqV3Fv"
     password_false = "123"
+
+print(Data.email_true)

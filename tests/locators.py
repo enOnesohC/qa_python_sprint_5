@@ -1,35 +1,35 @@
-"""locators, links"""
+"""locators"""
+from selenium.webdriver.common.by import By
 
-#authorization
-authorization_link_login = "https://stellarburgers.nomoreparties.site/login"
-authorization_link_main = "https://stellarburgers.nomoreparties.site/"
-authorization_email = "/html/body/div/div/main/div/form/fieldset[1]/div/div/input"
-authorization_password = "/html/body/div/div/main/div/form/fieldset[2]/div/div/input"
-authorization_login_button = "button_button__33qZ0.button_button_type_primary__1O7Bx.button_button_size_medium__3zxIa"
-authorization_main_button = "/html/body/div/div/main/section[2]/div/button"
-authorization_cabinet_button = "/html/body/div/div/header/nav/a/p"
-authorization_login_forgot_password_button = "/html/body/div/div/main/div/div/p[2]/a"
-authorization_login_remember_password_button = "/html/body/div/div/main/div/div/p/a"
+class Locators:
 
-#registration
-registration_link = "https://stellarburgers.nomoreparties.site/register"
-registration_name = "//*[@id='root']/div/main/div/form/fieldset[1]/div/div/input"
-registration_email = "//*[@id='root']/div/main/div/form/fieldset[2]/div/div/input"
-registration_password = "//input[@type='password']"
-registration_button = "//button[text()='Зарегистрироваться']"
-registration_already_exist_label = "/html/body/div/div/main/div/p"
-registration_wrong_password_label = "//*[@id='root']/div/main/div/form/fieldset[3]/div/p"
+    #authorization
+    authorization_email = [By.XPATH, "//input[@name='name']"]
+    authorization_password = [By.XPATH, "//input[@name='Пароль']"]
+    authorization_login_button = [By.XPATH, "//button[text()='Войти']"]
+    authorization_main_button = [By.XPATH, "//button[text()='Войти в аккаунт']"]
+    authorization_cabinet_button = [By.XPATH, "//p[text()='Личный Кабинет']"]
+    authorization_login_forgot_password_button = [By.XPATH, "//a[text()='Восстановить пароль']"]
+    authorization_login_remember_password_button = [By.XPATH, "//a[text()='Войти']"]
 
-#transition
-cabinet_logo = "/html/body/div/div/header/nav/div/a"
-cabinet_constructor = "/html/body/div/div/header/nav/ul/li[1]/a/p"
+    #registration
+    registration_name = [By.XPATH, "//label[text()='Имя']/following-sibling::input"]
+    registration_email = [By.XPATH, "//label[text()='Email']/following-sibling::input"]
+    registration_password = [By.XPATH, "//input[@type='password']"]
+    registration_button = [By.XPATH, "//button[text()='Зарегистрироваться']"]
+    registration_already_exist_label = [By.XPATH, "//p[text()='Такой пользователь уже существует']"]
+    registration_wrong_password_label = [By.XPATH, "//p[text()='Некорректный пароль']"]
 
-#constructor
-constructor_bread_xpath = "//span[text()='Булки']"
-constructor_sause_xpath = "//span[text()='Соусы']"
-constructor_filling_xpath = "//span[text()='Начинки']"
-constructor_current_class =  "tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect"
+    #transition
+    cabinet_logo = [By.XPATH, "//div[@class='AppHeader_header__logo__2D0X2']"]
+    cabinet_constructor = [By.XPATH, "//p[text()='Конструктор']"]
 
-#exit
-main_cabinet_button = "/html/body/div/div/header/nav/a/p"
-cabinet_exit_button = "/html/body/div/div/main/div/nav/ul/li[3]/button"
+    #constructor
+    constructor_bread_xpath = [By.XPATH, "//span[text()='Булки']"]
+    constructor_sause_xpath = [By.XPATH, "//span[text()='Соусы']"]
+    constructor_filling_xpath = [By.XPATH, "//span[text()='Начинки']"]
+    constructor_current_class = "tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect"
+
+    #exit
+    main_cabinet_button = [By.XPATH, "//p[text()='Личный Кабинет']"]
+    cabinet_exit_button = [By.XPATH, "//button[text()='Выход']"]
