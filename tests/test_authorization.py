@@ -30,8 +30,6 @@ class TestAuthorization:
 
         result = browser.current_url
 
-        browser.quit()
-
         assert result == "https://stellarburgers.nomoreparties.site/login"
 
     def test_authorization_main(self, browser):
@@ -54,8 +52,6 @@ class TestAuthorization:
         button.click()
 
         result = browser.current_url
-
-        browser.quit()
 
         assert result == "https://stellarburgers.nomoreparties.site/login"
 
@@ -84,8 +80,6 @@ class TestAuthorization:
 
         result = browser.current_url
 
-        browser.quit()
-
         assert result == "https://stellarburgers.nomoreparties.site/login"
 
     def test_authorization_cabinet(self, browser):
@@ -108,7 +102,5 @@ class TestAuthorization:
         button.click()
 
         result = browser.current_url
-
-        browser.quit()
 
         assert result == "https://stellarburgers.nomoreparties.site/login"

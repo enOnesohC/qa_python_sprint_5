@@ -40,5 +40,4 @@ class TestExit:
 
         result = browser.current_url
 
-        browser.quit()
         assert result == "https://stellarburgers.nomoreparties.site/login"

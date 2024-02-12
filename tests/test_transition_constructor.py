@@ -36,8 +36,6 @@ class TestTransition:
 
         result = browser.current_url
 
-        browser.quit()
-
         assert result == "https://stellarburgers.nomoreparties.site/account"
 
     def test_cabinet_to_constructor(self, browser):
@@ -68,8 +66,6 @@ class TestTransition:
 
         result = browser.current_url
 
-        browser.quit()
-
         assert result == "https://stellarburgers.nomoreparties.site/"
 
     def test_cabinet_to_logo(self, browser):
@@ -99,7 +95,5 @@ class TestTransition:
         wait.until(EC.url_to_be('https://stellarburgers.nomoreparties.site/'))
 
         result = browser.current_url
-
-        browser.quit()
 
         assert result == "https://stellarburgers.nomoreparties.site/"

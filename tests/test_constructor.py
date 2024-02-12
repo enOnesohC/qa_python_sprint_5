@@ -9,7 +9,6 @@
 from locators import Locators
 from data import Data
 import urls
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -34,12 +33,11 @@ class TestConstructor:
         WebDriverWait(browser, 2).until(EC.visibility_of_element_located(Locators.constructor_bread_xpath))
         span = WebDriverWait(browser, 10).until(EC.visibility_of_element_located(Locators.constructor_bread_xpath))
 
-        tab = span.find_element(By.XPATH, "./..")
+        tab = span.find_element(*Locators.constructor_parent_element)
 
         browser.execute_script("arguments[0].click();", span)
 
         tab_class = tab.get_attribute("class")
-        browser.quit()
 
         assert tab_class == Locators.constructor_current_class
 
@@ -61,12 +59,11 @@ class TestConstructor:
         WebDriverWait(browser, 2).until(EC.visibility_of_element_located(Locators.constructor_sause_xpath))
         span = WebDriverWait(browser, 10).until(EC.visibility_of_element_located(Locators.constructor_sause_xpath))
 
-        tab = span.find_element(By.XPATH, "./..")
+        tab = span.find_element(*Locators.constructor_parent_element)
 
         browser.execute_script("arguments[0].click();", span)
 
         tab_class = tab.get_attribute("class")
-        browser.quit()
         assert tab_class == Locators.constructor_current_class
 
     def test_transition_filling(self, browser):
@@ -87,12 +84,10 @@ class TestConstructor:
         WebDriverWait(browser, 2).until(EC.visibility_of_element_located(Locators.constructor_filling_xpath))
         span = WebDriverWait(browser, 10).until(EC.visibility_of_element_located(Locators.constructor_filling_xpath))
 
-        tab = span.find_element(By.XPATH, "./..")
+        tab = span.find_element(*Locators.constructor_parent_element)
 
         browser.execute_script("arguments[0].click();", span)
 
         tab_class = tab.get_attribute("class")
-
-        browser.quit()
 
         assert tab_class == Locators.constructor_current_class

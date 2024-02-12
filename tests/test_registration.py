@@ -38,8 +38,6 @@ class TestRegistration:
 
         result = browser.current_url
 
-        browser.quit()
-
         assert result == "https://stellarburgers.nomoreparties.site/login"
 
     def test_already_exist_user(self, browser):
@@ -66,8 +64,6 @@ class TestRegistration:
         texterror = browser.find_element(*Locators.registration_already_exist_label)
         result = texterror.text
 
-        browser.quit()
-
         assert result == "Такой пользователь уже существует"
 
     def test_wrong_password_error(self, browser):
@@ -93,6 +89,5 @@ class TestRegistration:
         WebDriverWait(browser, 2).until(EC.visibility_of_element_located(Locators.registration_wrong_password_label))
         texterror = browser.find_element(*Locators.registration_wrong_password_label)
         result = texterror.text
-        browser.quit()
 
         assert result == "Некорректный пароль"

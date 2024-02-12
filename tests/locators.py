@@ -29,6 +29,7 @@ class Locators:
     constructor_sause_xpath = [By.XPATH, "//span[text()='Соусы']"]
     constructor_filling_xpath = [By.XPATH, "//span[text()='Начинки']"]
     constructor_current_class = "tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect"
+    constructor_parent_element = [By.XPATH, "./.."]
 
     #exit
     main_cabinet_button = [By.XPATH, "//p[text()='Личный Кабинет']"]
